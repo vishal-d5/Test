@@ -1,0 +1,81 @@
+Role Gole Value
+
+1. As a user of zerobank, I should be able to use the search box filed to get the desired result.
+
+2. As a user of zerobank I want to able to give the important feedback to the zerobank , feedback page  is not secure page.
+
+3. As a user of zerobank I want when user want  to get online banking information it will see every features. 
+
+4. As a user of zerobank I want when user want to check account activity to any time he should be able to check.
+
+5. As a  user of zerobank I want when user want to transfer fund  to another account he should already userid and password.
+
+
+
+
+
+
+Feature :Home SearchBox Test
+ 
+1. As a user of zerobank, I should be able to use the search box filed to get the desired result.
+ 
+Scenario: user search the result
+Given user enter url "http://zero.webappsecurity.com/"
+when user enter  in the search box "Online Banking"
+Then user should get  expected links
+ 
+ 
+Feature :Feedback link Test
+2. As a user of zerobank I want to submit  the important feedback to the zerobank it should enabled for every user.
+ 
+Scenario: Feedback page enabled for user 
+Given user enter url "http://zero.webappsecurity.com/"
+When user click on feedback link
+Then user should enabled to write a feedback
+ 
+ Feature :Home Online Banking link Test
+3. As a user of zerobank I want when user want  to get online banking information it should see every features. 
+ 
+Scenario: user get online banking information
+Given user enter url "http://zero.webappsecurity.com/"
+when user click on online banking link
+Then user should able to see all the features of app for online banking
+ 
+
+Feature :Checking account activity Test
+4. As a user of zerobank I want when user wants to check account activity at any time he should able to check.
+ 
+Scenario: user check account activity
+Given user enter url "http://zero.webappsecurity.com/"
+When user click on Checking account activity link
+And user enter valid credentials and click on sign-In button
+then user should be able to see activity for his account
+ 
+Feature :Display fund transfer link Test
+5. As a  user of zerobank I want when user want to transfer fund  to another account he should already userid and password.
+ 
+Scenario: user check transfer fund page link
+ 
+Given user enter url "http://zero.webappsecurity.com/"
+When user click on tansfer fund link
+And user enter valid credentials and click on sign-In button 
+then user should be able to display the transfer fund page
+
+
+
+Feature :Login Functionality Test
+Scenario Outline: As a user when I entered valid userid and password into app
+ then I should get an error msg.
+ 
+ Given I am on login page
+When I enter user id as <username> and password as <password>
+And click on Signin button
+Then I validate that I get an error message "�Login and/or password are wrong.�
+
+Examples:
+|username|password|
+|"name1"|"pass1"|
+|""|""|
+|""|"pass1"|
+|"name2"|""|
+|"12345"|"@#$$"|
