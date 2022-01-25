@@ -1,0 +1,42 @@
+When I click on Sign in button
+And I navigate to log in page
+And I enter username as “admin”
+And I enter password as “admin123”
+And I click on Sign in button
+Then I should see Dashboard Page
+
+
+
+Feature 2: Adding Candidate in OrangeHRM
+As a user of OrangeHRM, I should able to click on add button in order to adding a candidate
+Scenario: Navigate to adding candidate form
+Given I navigate to website https://opensource-demo.orangehrmlive.com/index.php/auth/login
+When I click on Sign in button
+And I navigate to log in page
+And I enter username as “admin”
+And I enter password as “admin123”
+And I click on Sign in button
+And I navigate to dashboard page
+And I hover on recruitment tab
+And I click on Candidate tab
+And I click on Add button
+Then I should navigate to Candidate adding form
+
+
+
+Feature 3: Adding candidate in OrangeHRM
+As a user of OrangeHRM, I should able to add candidate in website with valid details
+Scenario : Adding candidate in OrangeHRM
+Given I navigate to website https://opensource-demo.orangehrmlive.com/index.php/auth/login
+When I click on Sign in button
+And I navigate to log in page
+And I enter username as “admin”
+And I enter password as “admin123”
+And I click on Sign in button
+And I navigate to dashboard page
+And I hover on recruitment tab
+And I click on Candidate tab
+And I click on Add button
+And I enter valid details in form
+And I click on save button
+Then It should displayed successfull message as "Successfull saved".
